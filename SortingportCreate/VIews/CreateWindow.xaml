@@ -1,0 +1,36 @@
+﻿<Window x:Class="SortingportCreate.VIews.CreateWindows"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SortingportCreate.VIews"
+        mc:Ignorable="d"
+        Title="分拣口配置生成" Height="450" Width="800" ResizeMode="NoResize">
+    <Grid>
+        <ListBox Name="listPort" HorizontalAlignment="Left" Height="399" Margin="10,10,0,0" VerticalAlignment="Top" Width="694">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <!--出口编号：从1开始、光电位置、出口方向：内/外、卸载速度:120、状态:打开、分拣码：与出口编号相同、IO点编号：与出口编号相同-->
+                    <!--起始光电位、下料口个数、出口方向-->
+                    <WrapPanel>
+                        <Label Content="起始光电位：" Margin="5"/>
+                        <Label Name="StartPoint" Content="{Binding Path=StartPoint}" MinWidth="10" Margin="5"/>
+                        <Label Content="下料口个数：" Margin="5"/>
+                        <Label Name="PortCount" Content="{Binding Path=PortCount}" MinWidth="10" Margin="5"/>
+                        <Label Content="出口方向：" Margin="5"/>
+                        <Label Name="ExportSide" Content="{Binding Path=ExportSide}" MinWidth="10" Margin="5"/>
+                        <Label Content="卸载速度：" Margin="5"/>
+                        <Label Name="UnloadSpeed" Content="120" MinWidth="10" Margin="5"/>
+                        <Label Content="状态：" Margin="5"/>
+                        <Label Name="Status" Content="打开" MinWidth="10" Margin="5"/>
+                    </WrapPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <Button Name="btnAdd" Content="添加" HorizontalAlignment="Left" Margin="709,10,0,0" VerticalAlignment="Top" Width="75" Click="btnAdd_Click"/>
+        <Button Name="btnEdit" Content="编辑" HorizontalAlignment="Left" Margin="709,34,0,0" VerticalAlignment="Top" Width="75" Click="btnEdit_Click"/>
+        <Button Name="btnDel" Content="删除" HorizontalAlignment="Left" Margin="709,58,0,0" VerticalAlignment="Top" Width="75" Click="btnDel_Click"/>
+        <Button Name="btnSave" Content="保存" HorizontalAlignment="Left" Margin="709,390,0,0" VerticalAlignment="Top" Width="75" Click="btnSave_Click"/>
+
+    </Grid>
+</Window>

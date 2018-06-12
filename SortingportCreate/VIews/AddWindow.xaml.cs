@@ -10,26 +10,30 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using SortingportCreate.VIews;
+using SortingportCreate.ViewModels;
 
-namespace SortingportCreate
+namespace SortingportCreate.VIews
 {
     /// <summary>
-    /// MainWindow.xaml 的交互逻辑
+    /// AddWindow.xaml 的交互逻辑
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class AddWindow : Window
     {
-        public MainWindow()
+        public Port port { get; set; }
+        public AddWindow()
         {
             InitializeComponent();
-            this.Hide();
-            CreateWindows cw = new CreateWindows
-            {
-                WindowStartupLocation = WindowStartupLocation.CenterScreen
-            };
-            cw.Show();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            g1.DataContext = port;
         }
     }
 }
