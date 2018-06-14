@@ -8,12 +8,12 @@
         Title="添加/编辑分拣口" Height="97.999" Width="499.332" Loaded="Window_Loaded" WindowStyle="None">
     <Grid Name="g1">
         <Label Content="起始光电:" HorizontalAlignment="Left" VerticalAlignment="Top"  Margin="10,10,0,0"/>
-        <TextBox Name="txtStartPoint" HorizontalAlignment="Left" Height="23"  TextWrapping="Wrap" Text="{Binding Path=StartPoint}" VerticalContentAlignment="Center" Width="62" Margin="76,12,0,55" />
+        <TextBox Name="txtStartPoint" HorizontalAlignment="Left" Height="23"  TextWrapping="Wrap" Text="{Binding Path=StartPoint}" VerticalContentAlignment="Center" Width="62" Margin="76,10,0,57" />
         <Label Content="下料口个数:" HorizontalAlignment="Left"  VerticalAlignment="Top"  Margin="158,10,0,0"/>
         <TextBox Name="txtPortCount" HorizontalAlignment="Left" Height="23"  TextWrapping="Wrap" Text="{Binding Path=PortCount}" VerticalContentAlignment="Center" Width="62" Margin="236,12,0,55" />
         <Label Content="下料口方向:" HorizontalAlignment="Left"  VerticalAlignment="Top"  Margin="316,10,0,0"/>
         <TextBox Name="txtExportSide" HorizontalAlignment="Left" Height="23"  TextWrapping="Wrap" Text="{Binding Path=ExportSide}" VerticalContentAlignment="Center" Width="62" Margin="394,12,0,55" />
         <Button Content="确认" HorizontalAlignment="Left" Margin="158,61,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
-        <Button Content="取消" Name="btnCancel" HorizontalAlignment="Left" Margin="252,61,0,0" VerticalAlignment="Top" Width="75" Click="btnCancel_Click"/>
+        <Button Content="取消" Name="btnCancel" HorizontalAlignment="Left" Margin="257,61,0,0" VerticalAlignment="Top" Width="75" Click="btnCancel_Click"/>
     </Grid>
 </Window>
