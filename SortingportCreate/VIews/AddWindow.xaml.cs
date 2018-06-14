@@ -21,19 +21,28 @@ namespace SortingportCreate.VIews
     public partial class AddWindow : Window
     {
         public Port port { get; set; }
+        public bool IsAdd { get; set; }
         public AddWindow()
         {
             InitializeComponent();
         }
-
+        
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            IsAdd = true;
             this.Close();
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             g1.DataContext = port;
+            IsAdd = true;
+        }
+
+        private void btnCancel_Click(object sender, RoutedEventArgs e)
+        {
+            IsAdd = false;
+            this.Close();
         }
     }
 }

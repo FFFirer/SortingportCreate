@@ -47,7 +47,8 @@ namespace SortingportCreate.VIews
             aw.port.ExportSide = "外";
             aw.ShowDialog();
             port = aw.port;
-            if(port != null)
+            bool IsAdd = aw.IsAdd;
+            if(port != null && IsAdd == true)
             {
                 ports.Add(port);
             }
